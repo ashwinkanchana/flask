@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "9f11031b-d69d-4b90-81cc-83fc43c3e7a1",
+		"name": "Flask todo",
+		"description": "Simple todo API using Flask & SQLite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "create new task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Lorem ipusm",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"create"
+							]
+						},
+						"description": "Create a new task\n\n`title` is mandatory\n\ndefault `status` is 0"
+					},
+					"response": [
+						{
+							"name": "create new todo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Lorem ipusm",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor sit amet",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"create"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:10:34 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"insert_id\": 13\n}"
+						},
+						{
+							"name": "create new todo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Lorem ipusm",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor sit amet",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"create"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:11:16 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"title is required!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Read",
+			"item": [
+				{
+					"name": "get all tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"all"
+							]
+						},
+						"description": "Get list of all taks"
+					},
+					"response": [
+						{
+							"name": "get all todo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/all",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1320"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:06:11 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"Vestibulum accumsan odio.\",\n        \"id\": 1,\n        \"status\": 0,\n        \"title\": \"Aenean auctor gravida sem.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"In sagittis dui vel nisl. Duis ac nibh.\",\n        \"id\": 2,\n        \"status\": 0,\n        \"title\": \"Praesent lectus.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"\",\n        \"id\": 3,\n        \"status\": 0,\n        \"title\": \"Consectetuer adipiscing.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"Sed sagittis.\",\n        \"id\": 4,\n        \"status\": 0,\n        \"title\": \"Vestibulum lacinia nisi venenatis.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"\",\n        \"id\": 5,\n        \"status\": 1,\n        \"title\": \"Vivamus vestibulum sagittis sapien.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"\",\n        \"id\": 6,\n        \"status\": 0,\n        \"title\": \"Duis consequat dui dolor.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"Donec ut mauris eget.\",\n        \"id\": 7,\n        \"status\": 1,\n        \"title\": \"Maecenas rhoncus aliquam.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"Consectetuer adipiscing elit.\",\n        \"id\": 8,\n        \"status\": 0,\n        \"title\": \"Aenean lectus.\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get task by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"4"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get one task by ID"
+					},
+					"response": [
+						{
+							"name": "get todo by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/api/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										""
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:06:36 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"created_at\": \"2021-08-19 17:06:06\",\n    \"description\": \"Sed sagittis.\",\n    \"id\": 4,\n    \"status\": 0,\n    \"title\": \"Vestibulum lacinia nisi venenatis.\"\n}"
+						},
+						{
+							"name": "get todo by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/api/68",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"68"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:07:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Invalid id!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"item": [
+				{
+					"name": "update task by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "New title",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Updated description",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"update"
+							]
+						},
+						"description": "Update task by `id`.\n\n`id` and `title` is mandatory"
+					},
+					"response": [
+						{
+							"name": "update task by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "New title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Updated description",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:11:41 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"update_id\": \"6\"\n}"
+						},
+						{
+							"name": "update task by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "6",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "New title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Updated description",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"update"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:12:28 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"id is required!\"\n}"
+						},
+						{
+							"name": "update task by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "New title",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "Updated description",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"update"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:12:42 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"title is required!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "delete task by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/delete/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"delete",
+								"7"
+							]
+						},
+						"description": "Delete task by `id`"
+					},
+					"response": [
+						{
+							"name": "delete task by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/delete/5",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"delete",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Aug 2021 17:12:59 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"delete_id\": \"5\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://127.0.0.1:5000/"
+		}
+	]
+}
