@@ -7,18 +7,18 @@ Simple todo API using Flask & SQLite</title><style media=screen>/*!* Bootstrap v
 <a class=text-success data-toggle=collapse data-parent=#accordion-Create href=#collapse-Create-createnewtask><h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>create new task</strong> &nbsp;|&nbsp;
 <strong class="request-method border-success">POST</strong>
 &nbsp;
-{{url}}/api/create</h4></a></div><div id=collapse-Create-createnewtask class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Create a new task<p><code>title</code> is mandatory<p>default <code>status</code> is 0</small><br><br><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody><tr><td>description<td>Lorem ipsum dolor sit amet<td></table><select class=resp-selector>
+{{url}}/create</h4></a></div><div id=collapse-Create-createnewtask class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Create a new task<p><code>title</code> is mandatory<p>default <code>status</code> is 0</small><br><br><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody><tr><td>title<td>Lorem ipusm<td><tr><td>description<td>Lorem ipsum dolor sit amet<td></table><select class=resp-selector>
 <option value>Select Example Request/Response
 <option value=req_res_Create_createnewtask_0_createnewtodo>create new todo
 <option value=req_res_Create_createnewtask_1_createnewtodo>create new todo</select><br><section id=req_res_Create_createnewtask_0_createnewtodo style=display:none><h4>Example Request</h4><h5>URL: {{url}}/api/create</h5><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody><tr><td>title<td>Lorem ipusm<td><tr><td>description<td>Lorem ipsum dolor sit amet<td></table><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>{
 &#34;insert_id&#34;: 13
-}</span><div class=clearfix></div><h5 class="label label-info">Code:</h5><strong>201</strong></section><section id=req_res_Create_createnewtask_1_createnewtodo style=display:none><h4>Example Request</h4><h5>URL: {{url}}/api/create</h5><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody><tr><td>title<td>Lorem ipusm<td><tr><td>description<td>Lorem ipsum dolor sit amet<td></table><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>{
+}</span><div class=clearfix></div><h5 class="label label-info">Code:</h5><strong>201</strong></section><section id=req_res_Create_createnewtask_1_createnewtodo style=display:none><h4>Example Request</h4><h5>URL: {{url}}/api/create</h5><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody><tr><td>description<td>Lorem ipsum dolor sit amet<td></table><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>{
 &#34;error&#34;: &#34;title is required!&#34;
 }</span><div class=clearfix></div><h5 class="label label-info">Code:</h5><strong>400</strong></section></div></div></div></div></div></div></div><div class="panel panel-default"><div class=panel-heading><h3 class=panel-title id=Delete>Delete
 <span class=badge>1</span></h3></div><div class=panel-body><p><div class=request-item><div class=panel-group id=accordion-Delete><div class="panel panel-info" id=jump-Delete-deletetaskbyid><div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse data-parent=#accordion-Delete href=#collapse-Delete-deletetaskbyid><h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>delete task by id</strong> &nbsp;|&nbsp;
 <strong class="request-method border-info">GET</strong>
 &nbsp;
-{{url}}/api/delete/7</h4></a></div><div id=collapse-Delete-deletetaskbyid class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Delete task by <code>id</code></small><br><br><select class=resp-selector>
+{{url}}/delete/7</h4></a></div><div id=collapse-Delete-deletetaskbyid class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Delete task by <code>id</code></small><br><br><select class=resp-selector>
 <option value>Select Example Request/Response
 <option value=req_res_Delete_deletetaskbyid_0_deletetaskbyid>delete task by id</select><br><section id=req_res_Delete_deletetaskbyid_0_deletetaskbyid style=display:none><h4>Example Request</h4><h5>URL: {{url}}/api/delete/5</h5><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>{
 &#34;delete_id&#34;: &#34;5&#34;
@@ -26,86 +26,95 @@ Simple todo API using Flask & SQLite</title><style media=screen>/*!* Bootstrap v
 <span class=badge>2</span></h3></div><div class=panel-body><p><div class=request-item><div class=panel-group id=accordion-Read><div class="panel panel-info" id=jump-Read-getalltasks><div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse data-parent=#accordion-Read href=#collapse-Read-getalltasks><h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>get all tasks</strong> &nbsp;|&nbsp;
 <strong class="request-method border-info">GET</strong>
 &nbsp;
-{{url}}/api/all</h4></a></div><div id=collapse-Read-getalltasks class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Get list of all taks</small><br><br><select class=resp-selector>
+{{url}}/read/all</h4></a></div><div id=collapse-Read-getalltasks class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Get list of all taks</small><br><br><select class=resp-selector>
 <option value>Select Example Request/Response
-<option value=req_res_Read_getalltasks_0_getalltodo>get all todo</select><br><section id=req_res_Read_getalltasks_0_getalltodo style=display:none><h4>Example Request</h4><h5>URL: {{url}}/api/all</h5><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>[
+<option value=req_res_Read_getalltasks_0_getalltasks>get all tasks</select><br><section id=req_res_Read_getalltasks_0_getalltasks style=display:none><h4>Example Request</h4><h5>URL: {{url}}/read/all</h5><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>[
 {
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
 &#34;description&#34;: &#34;Vestibulum accumsan odio.&#34;,
 &#34;id&#34;: 1,
 &#34;status&#34;: 0,
-&#34;title&#34;: &#34;Aenean auctor gravida sem.&#34;
+&#34;title&#34;: &#34;Aenean auctor gravida sem.&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:15:41&#34;
 },
 {
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
 &#34;description&#34;: &#34;In sagittis dui vel nisl. Duis ac nibh.&#34;,
 &#34;id&#34;: 2,
 &#34;status&#34;: 0,
-&#34;title&#34;: &#34;Praesent lectus.&#34;
+&#34;title&#34;: &#34;Praesent lectus.&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:15:41&#34;
 },
 {
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
 &#34;description&#34;: &#34;&#34;,
 &#34;id&#34;: 3,
 &#34;status&#34;: 0,
-&#34;title&#34;: &#34;Consectetuer adipiscing.&#34;
+&#34;title&#34;: &#34;Consectetuer adipiscing.&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:15:41&#34;
 },
 {
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
 &#34;description&#34;: &#34;Sed sagittis.&#34;,
 &#34;id&#34;: 4,
 &#34;status&#34;: 0,
-&#34;title&#34;: &#34;Vestibulum lacinia nisi venenatis.&#34;
+&#34;title&#34;: &#34;Vestibulum lacinia nisi venenatis.&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:15:41&#34;
 },
 {
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
 &#34;description&#34;: &#34;&#34;,
 &#34;id&#34;: 5,
 &#34;status&#34;: 1,
-&#34;title&#34;: &#34;Vivamus vestibulum sagittis sapien.&#34;
+&#34;title&#34;: &#34;Vivamus vestibulum sagittis sapien.&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:15:41&#34;
 },
 {
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
 &#34;description&#34;: &#34;&#34;,
 &#34;id&#34;: 6,
 &#34;status&#34;: 0,
-&#34;title&#34;: &#34;Duis consequat dui dolor.&#34;
+&#34;title&#34;: &#34;Duis consequat dui dolor.&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:15:41&#34;
 },
 {
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
 &#34;description&#34;: &#34;Donec ut mauris eget.&#34;,
 &#34;id&#34;: 7,
 &#34;status&#34;: 1,
-&#34;title&#34;: &#34;Maecenas rhoncus aliquam.&#34;
+&#34;title&#34;: &#34;Maecenas rhoncus aliquam.&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:15:41&#34;
 },
 {
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
 &#34;description&#34;: &#34;Consectetuer adipiscing elit.&#34;,
 &#34;id&#34;: 8,
 &#34;status&#34;: 0,
-&#34;title&#34;: &#34;Aenean lectus.&#34;
+&#34;title&#34;: &#34;Aenean lectus.&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:15:41&#34;
 }
 ]</span><div class=clearfix></div><h5 class="label label-info">Code:</h5><strong>200</strong></section></div></div></div><div class="panel panel-info" id=jump-Read-gettaskbyid><div class=panel-heading><small class="pull-right text-muted">formdata</small>
 <a class=text-info data-toggle=collapse data-parent=#accordion-Read href=#collapse-Read-gettaskbyid><h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>get task by id</strong> &nbsp;|&nbsp;
 <strong class="request-method border-info">GET</strong>
 &nbsp;
-{{url}}/api/4</h4></a></div><div id=collapse-Read-gettaskbyid class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Get one task by ID</small><br><br><h5 class="label label-primary">Body</h5><select class=resp-selector>
+{{url}}/read/1</h4></a></div><div id=collapse-Read-gettaskbyid class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Get one task by ID</small><br><br><h5 class="label label-primary">Body</h5><select class=resp-selector>
 <option value>Select Example Request/Response
-<option value=req_res_Read_gettaskbyid_0_gettodobyid>get todo by id
-<option value=req_res_Read_gettaskbyid_1_gettodobyid>get todo by id</select><br><section id=req_res_Read_gettaskbyid_0_gettodobyid style=display:none><h4>Example Request</h4><h5>URL: {{url}}/api/</h5><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody></table><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>{
-&#34;created_at&#34;: &#34;2021-08-19 17:06:06&#34;,
-&#34;description&#34;: &#34;Sed sagittis.&#34;,
-&#34;id&#34;: 4,
-&#34;status&#34;: 0,
-&#34;title&#34;: &#34;Vestibulum lacinia nisi venenatis.&#34;
-}</span><div class=clearfix></div><h5 class="label label-info">Code:</h5><strong>200</strong></section><section id=req_res_Read_gettaskbyid_1_gettodobyid style=display:none><h4>Example Request</h4><h5>URL: {{url}}/api/68</h5><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody></table><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>{
-&#34;error&#34;: &#34;Invalid id!&#34;
+<option value=req_res_Read_gettaskbyid_0_gettaskbyid>get task by id
+<option value=req_res_Read_gettaskbyid_1_gettaskbyid>get task by id</select><br><section id=req_res_Read_gettaskbyid_0_gettaskbyid style=display:none><h4>Example Request</h4><h5>URL: {{url}}/read/1</h5><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody></table><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>{
+&#34;created_at&#34;: &#34;2021-08-23 16:15:41&#34;,
+&#34;description&#34;: &#34;Updated description&#34;,
+&#34;id&#34;: 1,
+&#34;status&#34;: 1,
+&#34;title&#34;: &#34;New title&#34;,
+&#34;updated_at&#34;: &#34;2021-08-23 16:17:07&#34;
+}</span><div class=clearfix></div><h5 class="label label-info">Code:</h5><strong>200</strong></section><section id=req_res_Read_gettaskbyid_1_gettaskbyid style=display:none><h4>Example Request</h4><h5>URL: {{url}}/read/</h5><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody></table><h4>Example Response</h4><h5 class="label label-success">Body</h5><span class=resp-prettyprint>{
+&#34;error&#34;: &#34;id required&#34;
 }</span><div class=clearfix></div><h5 class="label label-info">Code:</h5><strong>404</strong></section></div></div></div></div></div></div></div><div class="panel panel-default"><div class=panel-heading><h3 class=panel-title id=Update>Update
 <span class=badge>1</span></h3></div><div class=panel-body><p><div class=request-item><div class=panel-group id=accordion-Update><div class="panel panel-warning" id=jump-Update-updatetaskbyid><div class=panel-heading><small class="pull-right text-muted">formdata</small>
 <a class=text-warning data-toggle=collapse data-parent=#accordion-Update href=#collapse-Update-updatetaskbyid><h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>update task by id</strong> &nbsp;|&nbsp;
 <strong class="request-method border-warning">PUT</strong>
 &nbsp;
-{{url}}/api/update</h4></a></div><div id=collapse-Update-updatetaskbyid class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Update task by <code>id</code>.<p><code>id</code> and <code>title</code> is mandatory</small><br><br><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody><tr><td>id<td>6<td><tr><td>title<td>New title<td><tr><td>description<td>Updated description<td><tr><td>status<td>1<td></table><select class=resp-selector>
+{{url}}/update</h4></a></div><div id=collapse-Update-updatetaskbyid class="panel-collapse collapse"><div class=panel-body><h5 class="label label-default">Description</h5><br><small><p>Update task by <code>id</code>.<p><code>id</code> and <code>title</code> is mandatory</small><br><br><h5 class="label label-primary">Body</h5><table class="table table-hover"><thead><tr><th>Key<th>Value<th>Description<tbody><tr><td>id<td>1<td><tr><td>title<td>New title<td><tr><td>description<td>Updated description<td><tr><td>status<td>1<td></table><select class=resp-selector>
 <option value>Select Example Request/Response
 <option value=req_res_Update_updatetaskbyid_0_updatetaskbyid>update task by id
 <option value=req_res_Update_updatetaskbyid_1_updatetaskbyid>update task by id
@@ -123,4 +132,4 @@ if(IsJsonString(html)){var obj=JSON.parse(html);var formattedJson=JSON.stringify
 function IsJsonString(str){try{JSON.parse(str);}catch(e){return false;}
 return true;}
 String.prototype.replaceAll=function(replaceThis,withThis){var re=new RegExp(RegExp.quote(replaceThis),"g");return this.replace(re,withThis);};RegExp.quote=function(str){return str.replace(/([.?*+^$[\]\\(){}-])/g,"\\$1");};function syntaxHighlight(json){json=json.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,function(match){var cls='number';if(/^"/.test(match)){if(/:$/.test(match)){cls='key';}else{cls='string';}}else if(/true|false/.test(match)){cls='boolean';}else if(/null/.test(match)){cls='null';}
-return '<span class="'+cls+'">'+match+'</span>';});}</script><br><br><footer class="navbar-default navbar-fixed-bottom"><div class=container-fluid><div class="span12 text-center"><span data-toggle=tooltip title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Made with <em class=love-color>&#9829;</em> by <a href=https://github.com/thedevsaddam target=_blank class=text-muted>thedevsaddam</a> | Generated at: 2021-08-19 23:22:12 by <a href=https://github.com/thedevsaddam/docgen target=_blank class=text-muted>docgen</a></span></div></div></footer>
+return '<span class="'+cls+'">'+match+'</span>';});}</script><br><br>

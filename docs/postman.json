@@ -20,8 +20,7 @@
 								{
 									"key": "title",
 									"value": "Lorem ipusm",
-									"type": "text",
-									"disabled": true
+									"type": "text"
 								},
 								{
 									"key": "description",
@@ -31,12 +30,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{url}}/api/create",
+							"raw": "{{url}}/create",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"create"
 							]
 						},
@@ -109,7 +107,8 @@
 										{
 											"key": "title",
 											"value": "Lorem ipusm",
-											"type": "text"
+											"type": "text",
+											"disabled": true
 										},
 										{
 											"key": "description",
@@ -166,12 +165,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/all",
+							"raw": "{{url}}/read/all",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
+								"read",
 								"all"
 							]
 						},
@@ -179,17 +178,17 @@
 					},
 					"response": [
 						{
-							"name": "get all todo",
+							"name": "get all tasks",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/api/all",
+									"raw": "{{url}}/read/all",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"api",
+										"read",
 										"all"
 									]
 								}
@@ -204,19 +203,19 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "1320"
+									"value": "1656"
 								},
 								{
 									"key": "Server",
-									"value": "Werkzeug/2.0.1 Python/3.9.2"
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 19 Aug 2021 17:06:11 GMT"
+									"value": "Mon, 23 Aug 2021 16:15:44 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"Vestibulum accumsan odio.\",\n        \"id\": 1,\n        \"status\": 0,\n        \"title\": \"Aenean auctor gravida sem.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"In sagittis dui vel nisl. Duis ac nibh.\",\n        \"id\": 2,\n        \"status\": 0,\n        \"title\": \"Praesent lectus.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"\",\n        \"id\": 3,\n        \"status\": 0,\n        \"title\": \"Consectetuer adipiscing.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"Sed sagittis.\",\n        \"id\": 4,\n        \"status\": 0,\n        \"title\": \"Vestibulum lacinia nisi venenatis.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"\",\n        \"id\": 5,\n        \"status\": 1,\n        \"title\": \"Vivamus vestibulum sagittis sapien.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"\",\n        \"id\": 6,\n        \"status\": 0,\n        \"title\": \"Duis consequat dui dolor.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"Donec ut mauris eget.\",\n        \"id\": 7,\n        \"status\": 1,\n        \"title\": \"Maecenas rhoncus aliquam.\"\n    },\n    {\n        \"created_at\": \"2021-08-19 17:06:06\",\n        \"description\": \"Consectetuer adipiscing elit.\",\n        \"id\": 8,\n        \"status\": 0,\n        \"title\": \"Aenean lectus.\"\n    }\n]"
+							"body": "[\n    {\n        \"created_at\": \"2021-08-23 16:15:41\",\n        \"description\": \"Vestibulum accumsan odio.\",\n        \"id\": 1,\n        \"status\": 0,\n        \"title\": \"Aenean auctor gravida sem.\",\n        \"updated_at\": \"2021-08-23 16:15:41\"\n    },\n    {\n        \"created_at\": \"2021-08-23 16:15:41\",\n        \"description\": \"In sagittis dui vel nisl. Duis ac nibh.\",\n        \"id\": 2,\n        \"status\": 0,\n        \"title\": \"Praesent lectus.\",\n        \"updated_at\": \"2021-08-23 16:15:41\"\n    },\n    {\n        \"created_at\": \"2021-08-23 16:15:41\",\n        \"description\": \"\",\n        \"id\": 3,\n        \"status\": 0,\n        \"title\": \"Consectetuer adipiscing.\",\n        \"updated_at\": \"2021-08-23 16:15:41\"\n    },\n    {\n        \"created_at\": \"2021-08-23 16:15:41\",\n        \"description\": \"Sed sagittis.\",\n        \"id\": 4,\n        \"status\": 0,\n        \"title\": \"Vestibulum lacinia nisi venenatis.\",\n        \"updated_at\": \"2021-08-23 16:15:41\"\n    },\n    {\n        \"created_at\": \"2021-08-23 16:15:41\",\n        \"description\": \"\",\n        \"id\": 5,\n        \"status\": 1,\n        \"title\": \"Vivamus vestibulum sagittis sapien.\",\n        \"updated_at\": \"2021-08-23 16:15:41\"\n    },\n    {\n        \"created_at\": \"2021-08-23 16:15:41\",\n        \"description\": \"\",\n        \"id\": 6,\n        \"status\": 0,\n        \"title\": \"Duis consequat dui dolor.\",\n        \"updated_at\": \"2021-08-23 16:15:41\"\n    },\n    {\n        \"created_at\": \"2021-08-23 16:15:41\",\n        \"description\": \"Donec ut mauris eget.\",\n        \"id\": 7,\n        \"status\": 1,\n        \"title\": \"Maecenas rhoncus aliquam.\",\n        \"updated_at\": \"2021-08-23 16:15:41\"\n    },\n    {\n        \"created_at\": \"2021-08-23 16:15:41\",\n        \"description\": \"Consectetuer adipiscing elit.\",\n        \"id\": 8,\n        \"status\": 0,\n        \"title\": \"Aenean lectus.\",\n        \"updated_at\": \"2021-08-23 16:15:41\"\n    }\n]"
 						}
 					]
 				},
@@ -233,13 +232,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{url}}/api/4",
+							"raw": "{{url}}/read/1",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
-								"4"
+								"read",
+								"1"
 							],
 							"query": [
 								{
@@ -253,7 +252,7 @@
 					},
 					"response": [
 						{
-							"name": "get todo by id",
+							"name": "get task by id",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -262,13 +261,13 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{url}}/api/",
+									"raw": "{{url}}/read/1",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"api",
-										""
+										"read",
+										"1"
 									],
 									"query": [
 										{
@@ -289,22 +288,22 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "155"
+									"value": "176"
 								},
 								{
 									"key": "Server",
-									"value": "Werkzeug/2.0.1 Python/3.9.2"
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 19 Aug 2021 17:06:36 GMT"
+									"value": "Mon, 23 Aug 2021 16:17:20 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"created_at\": \"2021-08-19 17:06:06\",\n    \"description\": \"Sed sagittis.\",\n    \"id\": 4,\n    \"status\": 0,\n    \"title\": \"Vestibulum lacinia nisi venenatis.\"\n}"
+							"body": "{\n    \"created_at\": \"2021-08-23 16:15:41\",\n    \"description\": \"Updated description\",\n    \"id\": 1,\n    \"status\": 1,\n    \"title\": \"New title\",\n    \"updated_at\": \"2021-08-23 16:17:07\"\n}"
 						},
 						{
-							"name": "get todo by id",
+							"name": "get task by id",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -313,13 +312,13 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{url}}/api/68",
+									"raw": "{{url}}/read/",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"api",
-										"68"
+										"read",
+										""
 									],
 									"query": [
 										{
@@ -344,15 +343,15 @@
 								},
 								{
 									"key": "Server",
-									"value": "Werkzeug/2.0.1 Python/3.9.2"
+									"value": "Werkzeug/1.0.0 Python/3.7.6"
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 19 Aug 2021 17:07:22 GMT"
+									"value": "Mon, 23 Aug 2021 16:27:10 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"error\": \"Invalid id!\"\n}"
+							"body": "{\n    \"error\": \"id required\"\n}"
 						}
 					]
 				}
@@ -371,7 +370,7 @@
 							"formdata": [
 								{
 									"key": "id",
-									"value": "6",
+									"value": "1",
 									"type": "text"
 								},
 								{
@@ -392,12 +391,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{url}}/api/update",
+							"raw": "{{url}}/update",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"update"
 							]
 						},
@@ -614,12 +612,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/delete/7",
+							"raw": "{{url}}/delete/7",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"delete",
 								"7"
 							]
